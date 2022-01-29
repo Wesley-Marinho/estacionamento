@@ -1,7 +1,7 @@
 package br.com.wesley.dtos;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import br.com.wesley.domain.Rotativo;
 
@@ -12,8 +12,8 @@ public class RotativoDto implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private LocalDateTime dataEntrada;
-	private LocalDateTime dataSaida;
+	private LocalDate dataEntrada;
+	private LocalDate dataSaida;
 	public RotativoDto() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -30,16 +30,16 @@ public class RotativoDto implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public LocalDateTime getDataEntrada() {
+	public LocalDate getDataEntrada() {
 		return dataEntrada;
 	}
-	public void setDataEntrada(LocalDateTime dataEntrada) {
+	public void setDataEntrada(LocalDate dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
-	public LocalDateTime getDataSaida() {
+	public LocalDate getDataSaida() {
 		return dataSaida;
 	}
-	public void setDataSaida(LocalDateTime dataSaida) {
+	public void setDataSaida(LocalDate dataSaida) {
 		this.dataSaida = dataSaida;
 	}
 	

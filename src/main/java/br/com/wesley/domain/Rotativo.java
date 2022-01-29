@@ -1,7 +1,7 @@
 package br.com.wesley.domain;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -23,8 +23,8 @@ public class Rotativo implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	private LocalDateTime dataEntrada;
-	private LocalDateTime dataSaida;
+	private LocalDate dataEntrada;
+	private LocalDate dataSaida;
 	
 	@OneToMany(mappedBy = "rotativo")
 	private List<Veiculo> veiculos = new ArrayList<>();
@@ -54,19 +54,19 @@ public class Rotativo implements Serializable{
 		this.id = id;
 	}
 
-	public LocalDateTime getDataEntrada() {
+	public LocalDate getDataEntrada() {
 		return dataEntrada;
 	}
 
-	public void setDataEntrada(LocalDateTime dataEntrada) {
+	public void setDataEntrada(LocalDate dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
 
-	public LocalDateTime getDataSaida() {
+	public LocalDate getDataSaida() {
 		return dataSaida;
 	}
 
-	public void setDataSaida(LocalDateTime dataSaida) {
+	public void setDataSaida(LocalDate dataSaida) {
 		this.dataSaida = dataSaida;
 	}
 
@@ -78,7 +78,7 @@ public class Rotativo implements Serializable{
 		this.veiculos = veiculos;
 	}
 
-	public Rotativo(Integer id, LocalDateTime dataEntrada, LocalDateTime dataSaida) {
+	public Rotativo(Integer id, LocalDate dataEntrada, LocalDate dataSaida) {
 		super();
 		this.id = id;
 		this.dataEntrada = dataEntrada;
