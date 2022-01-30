@@ -1,6 +1,6 @@
 package br.com.wesley.service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class DBService {
 		
 		Pessoa pessoa = new Pessoa(null, "Wesley", "99999999999");
 		
-		Rotativo rotativo = new Rotativo(null, LocalDate.now(), LocalDate.now());
+		Rotativo rotativo = new Rotativo(null, LocalDateTime.now(), LocalDateTime.now());
 		
 		Veiculo veiculo = new Veiculo(null, "GMHOH36", "Amarela", "Brasilia", true, pessoa, rotativo);
 		

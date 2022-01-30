@@ -57,11 +57,12 @@ public class VeiculoService {
 		return repository.save(obj);
 	}
 
-	public Veiculo createByRotativo(Integer id_pessoa,Veiculo obj) {
-		obj.setId(null);
-		Rotativo rotativo = rotativoService.findById(id_pessoa);
-		obj.setRotativo(rotativo);
-		return repository.save(obj);
+	public Veiculo updateByRotativo(Integer id , Veiculo obj) {
+		Rotativo rotativo = rotativoService.findById(id);
+		Veiculo veiculo = findById(obj.getId());
+		veiculo.setRotativo(rotativo);
+		veiculo.setEstacionado(obj.getEstacionado());
+		return repository.save(veiculo);
 	}
 	
 	public Veiculo update(Integer id, VeiculoDto objDto) {

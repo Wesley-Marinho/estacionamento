@@ -31,7 +31,7 @@ public class Pessoa implements Serializable{
 	private String nome;
 	
 	@NotEmpty(message = "Campo telefone requerido")
-	@Length(min = 8, max = 11, message = "O campo telefone deve ter entre 8 e 11 caracteres")
+	@Length(min = 11, max = 11, message = "O campo telefone deve ter 11 caracteres")
 	private String telefone;
 
 	@OneToMany(mappedBy = "pessoa")

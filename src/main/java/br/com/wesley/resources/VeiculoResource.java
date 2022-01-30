@@ -69,18 +69,17 @@ public class VeiculoResource {
 	@PostMapping(value = "pessoa")
 	public ResponseEntity<Veiculo> createByPessoa(@RequestParam(value = "pessoa", defaultValue = "0") Integer id_pessoa,
 			@RequestBody Veiculo obj) {
-		
 		Veiculo newObj = service.createByPessoa(id_pessoa, obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/veiculo/{id}").buildAndExpand(newObj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 	
-	@PostMapping(value = "rotativo")
-	public ResponseEntity<Veiculo> createByRotativo(@RequestParam(value = "rotativo", defaultValue = "0") Integer id_rotativo,
+	@PutMapping(value = "rotativo")
+	public ResponseEntity<Veiculo> updateByRotativo(@RequestParam(value = "rotativo", defaultValue = "0") Integer id_rotativo,
 			@RequestBody Veiculo obj) {
 		
-		Veiculo newObj = service.createByRotativo(id_rotativo, obj);
-		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/veiculo/{id}").buildAndExpand(newObj.getId()).toUri();
+		Veiculo newObj = service.updateByRotativo(id_rotativo, obj);
+		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/rotativo/{id}").buildAndExpand(newObj.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 	

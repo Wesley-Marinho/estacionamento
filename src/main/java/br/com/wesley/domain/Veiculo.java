@@ -35,7 +35,7 @@ public class Veiculo implements Serializable{
 	private String cor;
 	
 	@NotEmpty(message = "Campo modelo requerido")
-	@Length(min = 5, max = 15, message = "O campo nome deve ter entre 5 e 15 caracteres")
+	@Length(min = 3, max = 15, message = "O campo nome deve ter entre 3 e 15 caracteres")
 	private String modelo;
 
 	
